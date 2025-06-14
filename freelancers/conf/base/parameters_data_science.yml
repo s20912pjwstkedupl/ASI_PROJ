@@ -1,0 +1,35 @@
+model_options:
+  test_size: 0.2
+  random_state: 3
+  features:
+    - Job_Category
+    - Platform
+    - Experience_Level
+    - Client_Region
+    - Payment_Method
+    - Job_Completed
+    - Hourly_Rate
+    - Job_Success_Rate
+    - Client_Rating
+    - Job_Duration_Days
+    - Project_Type
+    - Rehire_Rate
+    - Marketing_Spend
+
+model_output_path: "data/07_model_output/autogluon_model"
+
+hyperparameters:
+  GBM:
+    extra_trees: True
+    ag_args:
+      name_suffix: XT
+    learning_rate: 0.05
+    num_boost_round: 3000
+    max_depth: 10
+    subsample: 0.8
+    colsample_bytree: 0.8
+    reg_alpha: 1.0
+    reg_lambda: 1.0
+
+  CAT:
+    iterations: 3000
