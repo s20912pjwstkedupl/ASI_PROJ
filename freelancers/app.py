@@ -5,7 +5,7 @@ import pandas as pd
 from autogluon.tabular import TabularPredictor
 
 # Ścieżka do modelu
-MODEL_PATH = 'models/ModelOut'
+MODEL_PATH = 'models/autogluon_model/'
 
 # Ścieżka do danych (żeby wyciągnąć unikalne wartości dla dropdownów)
 DATA_PATH = 'datasets/freelancer_earnings_bd.csv'
@@ -44,6 +44,9 @@ input_data['Payment_Method'] = st.selectbox('Payment Method', payment_method_opt
 input_data['Job_Completed'] = st.number_input('Job Completed', min_value=0)
 input_data['Earnings_USD'] = st.number_input('Earnings (USD)', min_value=0.0)
 input_data['Hourly_Rate'] = st.number_input('Hourly Rate', min_value=0.0)
+input_data['Estimated_Earnings'] = st.number_input('Estimated Earnings', min_value=0.0)
+input_data['Success_Weighted_Impact'] = st.number_input('Success Weighted impact', min_value=0.0)
+input_data['Rehire_Impact'] = st.number_input('Rehire impact', min_value=0.0)
 input_data['Client_Rating'] = st.number_input('Client Rating', min_value=0.0, max_value=5.0, step=0.1)
 input_data['Job_Duration_Days'] = st.number_input('Job Duration (Days)', min_value=0)
 input_data['Project_Type'] = st.selectbox('Project Type', project_type_options)
