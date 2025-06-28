@@ -31,3 +31,6 @@ Fitting model: WeightedEnsemble_L2 ...
 ```
 ## Kedro pipeline (VIZ)
 ![kdr_viz.png](kdr_viz.png)
+
+### Streamlit cloud
+https://s20912asiproj.streamlit.app/
